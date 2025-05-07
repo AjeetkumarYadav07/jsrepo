@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Genrate a <br> <span>Random Password</span>
+
+        </h1>
+
+        <div class="display">
+            <input type="text" id="password" placeholder="Password">
+            <img  onclick="copyPassword()" src="https://cdn-icons-png.flaticon.com/512/747/747938.png" alt="copy-icon">
+        </div>
+
+
+        <button onclick="genratePassword()" id="passBtn"> Genrate Password</button>
+    </div>
+
+
+
+
+    <script>
+        const passwordBox =  document .getElementById ("password");
+        const length = 10 ;
+        
+        const upperCase = "ABCDEFGHJKLMNOPQQRSTVWXZ";
+        const lowerCase = "abcdefghjklmnopqrstvwxyz";
+        const number    = "1234567890";
+        const symbol    = " @#%&*+=" ;
+
+        const allChar = upperCase + lowerCase + number + symbol ;
+
+  
+         function genratePassword () {
+
+            let password = "";
+
+            password += upperCase[Math.floor(Math.random() * upperCase.length)];
+            password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+            password += number[Math.floor(Math.random() * number.length)];
+            password += symbol[Math.floor(Math.random() * symbol.length)];
+
+
+
+            while(password.length < length){
+                password += allChar[Math.floor(Math.random()* allChar.length)];
+
+            }
+
+            passwordBox.value = password ;
+         }
+        
+        //  if password is blank
+        
+         function copyPassword (){
+
+              
+        if( passwordBox.value  == ""){
+            alert("no pasword ") 
+            return ;
+         }
+       
+           
+             passwordBox.select();
+             document.execCommand("copy")
+
+             alert("copy sucess")
+         }
+        
+
+       
+    </script>
+</body>
+</html>
