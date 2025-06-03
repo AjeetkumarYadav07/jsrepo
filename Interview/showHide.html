@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Show And Hide Password</h1>
+    <div class="input-group w-50">
+        <input type="password" class="inputData">
+
+        <button>
+            show 
+        </button>
+    </div>
+
+
+    <script>
+        
+     let input = document.getElementsByClassName("inputData")[0];
+     let btn = document.querySelector("button");
+
+      btn.onclick = () =>{
+        
+        if(input.type === "password"){
+            
+            input.type = "text" ;
+
+            btn.innerHTML = "hide";
+           
+        }
+
+        else {
+            input.type = "password";
+            btn.innerHTML = "show"
+           
+        }
+      }
+
+    </script>
+</body>
+</html>

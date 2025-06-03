@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+body {
+    display: flex;
+    justify-content: center;   /* Centers vertically in column direction */
+    align-items: center;       /* Centers horizontally */
+    flex-direction: column;    /* Children are stacked vertically */
+    height: 100vh;             /* Full height of viewport */
+    text-align: center;
+    margin: 0;                 /* Remove default margin */
+}
+input{
+    width: 50vh;
+    padding: 5px;
+}
+button{
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+</style>
+<body>
+     <h3>Write a program to find the factorial of given or user input</h3>
+
+     <input id="userInput" type="text" placeholder="Enter your number">
+
+     <button id="btn"  >Get Factorial</button>
+
+     <h1 id="result">Result</h1>
+
+
+
+     <script>
+
+        const getInput = document.getElementById("userInput");
+        const btn =    document.getElementById("btn");
+        const result = document.getElementById("result");
+
+            btn.onclick = (e) =>{
+              let  value = Number(getInput.value);
+                let output = 1;
+                for( let i = value; i>=1 ; i--){
+                    
+                     output = output * i;
+                }
+
+                result.innerHTML = `factorial of ${value} is : ${output}`;
+            } 
+     </script>
+</body>
+</html>

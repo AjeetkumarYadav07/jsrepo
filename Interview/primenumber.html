@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> to check a given is prime or not</h1>
+    <input type="text">
+    <button>check</button>
+    <br>
+    <h2></h2>
+
+    <script>
+        let btn = document.querySelector("button");
+        let input = document.querySelector("input");
+        let h2 = document.querySelector("h2");
+
+        btn.onclick = () => {
+           let num = Number(input.value) ;
+
+           if(num == 2){
+             h2.innerHTML = ` ${num} Number is Prime`;
+           }
+             else if (num > 2 ){
+              let isPrime = true ;
+
+              for(let i = 2 ; i<num ; i++){
+                  if(num % i == 0){
+                    isPrime = false ;
+                    break ;
+                  }
+                
+              }
+              if(isPrime){
+                 h2.innerHTML = ` ${num} Number is Prime`;
+              }
+              else{
+                 h2.innerHTML = ` ${num} Number is Not Prime` ;
+              }
+           }
+           else {
+                 h2.innerHTML = ` ${num} Number is Not Prime`
+           }
+           
+        }
+           
+        
+    </script>
+</body>
+</html>
