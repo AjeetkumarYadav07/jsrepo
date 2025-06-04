@@ -1,5 +1,5 @@
 
-alert("wlecoe") ;
+
 
 const town = document.querySelector(".city");
 const humidity = document.querySelector(".humidity");
