@@ -37,4 +37,4 @@ console.log(uperCaseString) ;     // output :  HY I AM A UPPERCASE STRING
 //Method 6 String.trime() 
 const trimString = '     hello you look good';
 const aftertriming = trimString.trim();
-console.log(aftertriming);  // Remove white space from and return new string 
+console.log(aftertriming);  // Remove white space from and return new string
