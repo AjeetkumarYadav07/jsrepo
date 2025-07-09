@@ -34,7 +34,7 @@ const uperString = 'Hy i am a upperCase string' ;
 const uperCaseString = uperString.toUpperCase() ;
 console.log(uperCaseString) ;     // output :  HY I AM A UPPERCASE STRING
 
-//Method 6 String.trime() 
+//Method 6 String.trim() 
 const trimString = '     hello you look good';
 const aftertriming = trimString.trim();
 console.log(aftertriming);  // Remove white space from and return new string 
