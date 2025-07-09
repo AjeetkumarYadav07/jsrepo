@@ -34,7 +34,29 @@ const uperString = 'Hy i am a upperCase string' ;
 const uperCaseString = uperString.toUpperCase() ;
 console.log(uperCaseString) ;     // output :  HY I AM A UPPERCASE STRING
 
-//Method 6 String.trime() 
+//Method 6 String.trim() 
 const trimString = '     hello you look good';
 const aftertriming = trimString.trim();
 console.log(aftertriming);  // Remove white space from and return new string 
+
+// Method 7 String.replace() 
+const replaceString = "Hello I am Js" ;
+const replacedString = replaceString.replace('Js' , 'TypeScript');
+console.log(replacedString) ;  // Output : JS > Hello I am TypeScript ;
+
+
+
+//12. Create a function that reverses a string.
+ // input = 'hello'     output = 'olleh' 
+
+ function reverseString (str) {
+     let reversed = '' ;
+    for(let i = str.length -1  ; i >= 0 ; i-- ){
+         reversed += str[i] ;
+    }
+
+    return reversed ;
+ }
+
+ console.log( reverseString('hello') ) ;   // olleh 
+
