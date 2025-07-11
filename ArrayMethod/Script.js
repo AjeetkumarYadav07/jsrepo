@@ -159,3 +159,33 @@ console.log(findel2); // --return : undefind
   
 
 
+
+  // --- Method no 8 array.shift() ---- //
+    // -- removes the 1st element from an array : also change the orignal array 
+    
+    let colors = [red , green , blue] ;
+    let firstcolor = colors.shift() ;
+
+    console.log(firstcolor) //   Output : red 
+    console.log(colors)   // Output :  [green , blue];
+
+
+
+    // -------  Method no 9 array.unShift()  ----- //
+      // --- add new element in the 1st postion ----   Changed in original array  //
+    let marks = [12 , 23 , 44, 33];
+    let newMarks = marks.unshift(9);
+   
+      console.log(marks)      // Output : [9 , 12 ,23 , 44 , 33];
+
+      // --- mannual unShift without using mehtods 
+
+      function mannualShift (arr , value) {
+         for(let i = arr.length ; i > 0 ; i --){
+           arr[i] = arr[i-1];
+         }
+         arr[0] = value ;
+         return arr.length 
+      } 
+      let a = [15 , 22 , 33 ];
+      mannualShift(a , 11) ;    //  Output = [11 , 15 , 22 , 33]
