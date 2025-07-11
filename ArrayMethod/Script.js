@@ -90,3 +90,72 @@ const cart = [
 
 const cartTotal = cart.reduce((acc , item) => item + item.price  , 0);
 console.log(cartTotal) ;    // Output :  1300
+
+
+
+//-----   5. Array.fill() ----- //
+  //--   Array.fill(value  , start , end) --//
+
+  let password = [1 , 2 ,3 ,5 ,6,9];
+   password.fill(0);
+   console.log(password) ; // output : [0 , 0 , 0, 0, 0, 0, 0, 0];
+
+
+   let num = [1 , 2, 3, 4, ,5,6];
+   num.fill(8,1,4);
+   console.log(num)  // Output : [1 , 8 ,8 ,8 , 5 , 6 ]
+
+  //-- Create new Array by using fill() -- //
+
+const arr = new Array(10).fill(2) ; // it creates an array with length =  10 and value =2 ;
+
+
+
+// Method no: 6  ----- Array.find() ------ //
+
+const findlist = [1 ,2 , 4, 5] ;
+const findel = findlist.find((el) => el === 2);
+const findel2 = findlist.find((el) => el === 99);
+console.log(findel) //  -- return // 2 
+console.log(findel2); // --return : undefind 
+
+  // --- if we want to do same task mannual --- 
+
+  const arrlist = [ 2 , 3,  5, ,64 , 54];
+  const target = 54 ;
+  let findOutput  ;
+
+  for(let i = 0 ; i< arrlist.length ; i++){
+    if(arrlist[i] === target){
+      output = arrlist[i] 
+      break 
+    }
+  }
+
+  console.log(findOutput);
+
+
+
+
+//  Method no7 -------  Array.indexOf() ------- //
+// Returns the first index at which a given element can be found in the array, or -1 if it is not present.
+  const indexlist = [1 , 2 , 3, 5, 8];
+  indexlistlist.indexOf(3) ;  // Ouput : 2 ;
+  indexlist.index(99)   ;     // Output : -1 ;
+
+
+    // ---- mannual without using method ---
+  const sevenlist =  [ 1 , 3, 4 ,5 , 12, 14];
+  const seventarget = 5 ;
+  let sevenOutput = -1 ; 
+
+  for(let i = 0 ; i<sevenlist.length ; i++){
+    if(sevenlist[i] === seventarget){
+      sevenOutput = i ;
+      break
+    }
+  }
+  console.log(sevenOutput);
+  
+
+
