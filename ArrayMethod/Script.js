@@ -111,7 +111,7 @@ const arr = new Array(10).fill(2) ; // it creates an array with length =  10 and
 
 
 
-// Method no: 5  ----- Array.find() ------ //
+// Method no: 6  ----- Array.find() ------ //
 
 const findlist = [1 ,2 , 4, 5] ;
 const findel = findlist.find((el) => el === 2);
@@ -133,3 +133,29 @@ console.log(findel2); // --return : undefind
   }
 
   console.log(findOutput);
+
+
+
+
+//  Method no7 -------  Array.indexOf() ------- //
+// Returns the first index at which a given element can be found in the array, or -1 if it is not present.
+  const indexlist = [1 , 2 , 3, 5, 8];
+  indexlistlist.indexOf(3) ;  // Ouput : 2 ;
+  indexlist.index(99)   ;     // Output : -1 ;
+
+
+    // ---- mannual without using method ---
+  const sevenlist =  [ 1 , 3, 4 ,5 , 12, 14];
+  const seventarget = 5 ;
+  let sevenOutput = -1 ; 
+
+  for(let i = 0 ; i<sevenlist.length ; i++){
+    if(sevenlist[i] === seventarget){
+      sevenOutput = i ;
+      break
+    }
+  }
+  console.log(sevenOutput);
+  
+
+
