@@ -189,3 +189,12 @@ console.log(findel2); // --return : undefind
       } 
       let a = [15 , 22 , 33 ];
       mannualShift(a , 11) ;    //  Output = [11 , 15 , 22 , 33]
+
+
+
+ 
+      // ---- Method  Array.Splice() --- 
+
+      const splicelist = [1, 2, 3, 4, 5];
+list.splice(1, 2); // [2, 3]
+list; // [1, 4, 5]
