@@ -193,8 +193,24 @@ console.log(findel2); // --return : undefind
 
 
  
-      // ---- Method  Array.Splice() --- 
+      // ---- Methodno 10  Array.Splice() --- 
 
       const splicelist = [1, 2, 3, 4, 5];
 list.splice(1, 2); // [2, 3]
 list; // [1, 4, 5]
+
+
+  // ---- Method no 11   Array.slice() ---- //
+
+const fruits  = ['Apple' , 'banana' , 'Mango' ,'cheery'] ;
+const sliced = fruits.slice(1 , 3);
+console.log(fruits) ;
+console.log(sliced);
+
+
+
+// ------ Method no 12  Array.join() ---- //
+    // --- Joins all elements of an array into a string.  ---- //
+
+    console.log("helloo js");
+
