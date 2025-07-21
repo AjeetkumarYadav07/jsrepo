@@ -214,3 +214,40 @@ console.log(sliced);
 
     console.log("helloo js");
 
+const customers = [
+  {
+    id: 1,
+    name: "Alice",
+    orders: [
+      {
+        orderId: "A100",
+        date: "2025-07-15",
+        products: [
+          { productId: "P1", name: "Laptop", price: 1000, quantity: 1 },
+          { productId: "P2", name: "Mouse", price: 50, quantity: 2 }
+        ]
+      },
+      {
+        orderId: "A101",
+        date: "2025-07-18",
+        products: [
+          { productId: "P3", name: "Monitor", price: 200, quantity: 1 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: "Bob",
+    orders: [
+      {
+        orderId: "B200",
+        date: "2025-07-19",
+        products: [
+          { productId: "P1", name: "Laptop", price: 1000, quantity: 2 },
+          { productId: "P4", name: "Keyboard", price: 80, quantity: 1 }
+        ]
+      }
+    ]
+  }
+];
