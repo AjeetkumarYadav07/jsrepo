@@ -66,3 +66,19 @@ const addStatus = customers.map((customer) => {
     return {...customer , status: "Active"}
 } );
 console.log(addStatus);
+
+
+
+// 2. List all order IDs made by all customers.
+
+//     Output: ["A100", "A101", "B200"]
+
+const orderids = customers.flatMap(customer => customer.orders.map(order => order.orderId)) ;
+console.log(orderids)  // solving nested array 
+
+// 3. List of products buy by Alice 
+
+const byAlice = customers
+.filter(customer => customer.name === "Alice") 
+.flatMap(customer => customer.orders.flatMap(order => order.products) );
+console.log(byAlice) ; // return only product thay are bought by Alice
